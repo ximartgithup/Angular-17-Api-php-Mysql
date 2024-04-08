@@ -1,0 +1,36 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ID</label>
+        <input type="text" class="form-control" [(ngModel)]="propietario.id" formControlName="id" placeholder="id"  readonly>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+        <input type="text" class="form-control" [(ngModel)]="propietario.nombres" formControlName="nombres" placeholder="nombre"  required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" [(ngModel)]="propietario.apellidos" formControlName="apellidos"  placeholder="apellidos"  required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Direccion</label>
+        <input type="text" class="form-control" [(ngModel)]="propietario.direccion" formControlName="direccion"  placeholder="direccion"  required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+        <input type="text" class="form-control" [(ngModel)]="propietario.telefono" formControlName="telefono"  placeholder="telefono"  required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Correo</label>
+        <input type="email" class="form-control" [(ngModel)]="propietario.correo" formControlName="correo"  placeholder="email"  required>
+    </div>
+    <div class="row g-0 text-center">
+        <div class="col-sm-6 col-md-6">
+            <button type="button" class="btn btn-primary" (click)="actualizarPropietario()">Guardar</button>
+        </div>
+        <div class="col-6 col-md-6">
+            <button type="button" class="btn btn-danger" (click)="listarPropietario()">cancelar</button>
+        </div>
+    </div>
+    
+    </form>
